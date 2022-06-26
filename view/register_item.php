@@ -1,5 +1,7 @@
 <?php 
   require_once( '../model/User.php' ); 
+  require_once('../model/db_connect.php');
+  require_once('../model/Producto.php');
 
   $user = new User();
 

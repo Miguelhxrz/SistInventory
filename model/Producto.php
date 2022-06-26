@@ -1,5 +1,4 @@
 <?php 
-require_once('../model/db_connect.php');
 
 class Producto {
 

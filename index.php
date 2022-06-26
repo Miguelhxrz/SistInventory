@@ -31,6 +31,7 @@
       <?php 
 
         require_once( './model/User.php' );
+        require_once('./model/db_connect.php');
 
         $user =  new User();
 
