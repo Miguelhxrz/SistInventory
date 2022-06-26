@@ -1,5 +1,10 @@
 <?php 
-  require_once( '../model/User.php' ); 
+  require_once( '../model/User.php' );
+  require_once( '../model/Producto.php' );
+  
+  $product = new Producto();
+
+  $producto = $product->showproducto();
 
   $user = new User();
 
@@ -43,12 +48,12 @@
   <p class="products__names">nombre</p>
   <p class="products__names">precio</p>
   <p class="products__names">cantidad</p>
-
-  <p class="products__names">id</p>
-  <p class="products__names">nombre</p>
-  <p class="products__names">precio</p>
-  <p class="products__names">cantidad</p>
-
+  <?php foreach($producto as $item) {?>
+    <p class="products__names"> <?php echo $item['id'] ?> </p>
+    <p class="products__names"> <?php echo $item['nombre'] ?> </p>
+    <p class="products__names"> <?php echo $item['precio'] ?> </p>
+    <p class="products__names"> <?php echo $item['cantidad'] ?> </p>
+  <?php } ?>
   </section>
 
   </article>
