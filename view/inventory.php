@@ -1,3 +1,11 @@
+<?php 
+  require_once( '../model/User.php' ); 
+
+  $user = new User();
+
+  $request = $user->GetUsername();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +22,10 @@
 
   <nav class="header__nav">
     <ul>
-      <li class="nav__item"><a href='./register_item.php' ></a></li>
+      <li class="nav__item"><a href='./register_item.php'> Registrar producto</a></li>
       <li class="nav__item user">
-        <img src="" alt="">
-        <h4 class="username"></h4>
+        <img src="../source/usuario.svg" alt="usuario">
+        <p class="username"><?php echo $request ?></p>
       </li>
     </ul>
   </nav>
@@ -26,6 +34,28 @@
   <main class="container">
 
   <article class="products__container">
+
+  <h2 class="products__title">Bienvenido al inventario</h2>
+  
+  <section class="products">
+
+  <p class="products__names">id</p>
+  <p class="products__names">nombre</p>
+  <p class="products__names">precio</p>
+  <p class="products__names">cantidad</p>
+
+  <p class="products__names">id</p>
+  <p class="products__names">nombre</p>
+  <p class="products__names">precio</p>
+  <p class="products__names">cantidad</p>
+
+
+
+
+
+
+
+  </section>
 
 
 
