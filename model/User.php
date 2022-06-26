@@ -1,6 +1,6 @@
 <?php 
 
-require_once('./model/db_connect.php');
+require_once('../model/db_connect.php');
 
 class User {
 
@@ -84,6 +84,30 @@ class User {
       return "ERROR: Username y password erroneos";
 
     }
+
+  }
+
+
+  function GetUsername () {
+
+      $query = "SELECT `username` FROM `users`";
+  
+      $send = $this->db->sendQuery($query);
+  
+      $users = '';
+  
+      if(mysqli_num_rows($send) > 0) {
+  
+        while($rows =  mysqli_fetch_assoc($send)) {
+          $users = $rows['username'];
+        }
+  
+        return $users;
+  
+      }else {
+        return 0;
+      }
+  
 
   }
 
