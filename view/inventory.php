@@ -49,26 +49,7 @@
   <p class="products__names">precio</p>
   <p class="products__names">cantidad</p>
 
-
-
-
-
-
-
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   </article>
   </main>
