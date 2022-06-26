@@ -30,6 +30,17 @@
       <img src="../source/usuario.svg" alt="usuario">
       <p class="username"><?php echo $request ?></p>
     </li>
+    <li class="nav__item user">
+        <form action="../index.php" method="POST">
+          <input type="submit" value="Salir" name="salir" class="salir">
+        </form>
+        <?php 
+        if(isset($_POST['salir'])){
+          session_destroy();
+
+        }
+        ?>
+      </li>
   </ul>
 </nav>
 

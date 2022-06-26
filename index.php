@@ -33,6 +33,8 @@
         require_once( './model/User.php' );
         require_once('./model/db_connect.php');
 
+        session_start();
+
         $user =  new User();
 
         if( isset($_POST['send']) ) {
@@ -42,13 +44,13 @@
 
           $login = $user->Login( $username, $password);
 
-
           if ( $login !== 1) {
 
             echo "<h2 class='error'>".$login."</h2>";
           
           }else {
 
+            $_SESSION['username'] = $username;
 
             header('Location: '.'./view/inventory.php');
 

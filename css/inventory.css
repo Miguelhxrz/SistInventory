@@ -8,13 +8,16 @@
 html {
     font-size: 62.5%
 }
-:root {
 
+:root {
     --color: rgb(41, 120, 194);
     --font: 'Poppins', sans-serif;
-
 }
 
+[type='submit'] {
+    border: 0;
+    background: none;
+}
 
 body {
     background-color: var(--color);
@@ -80,6 +83,16 @@ body {
     align-items: center;
     font-size: 1.6rem;
     font-weight: 400;
+}
+
+.salir {
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    font-family: var(--font);
+    margin-left: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 .container {
