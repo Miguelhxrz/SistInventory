@@ -55,6 +55,31 @@ class Producto {
     }
   }
 
+  function showproducto () {
+
+      $query = "SELECT * FROM `producto`";
+  
+      $send = $this->db->sendQuery($query);
+  
+      $products = array();
+  
+      if(mysqli_num_rows($send) > 0) {
+  
+        while($rows =  mysqli_fetch_assoc($send)) {
+          array_push($products,$rows);
+        }
+  
+        return $products;
+  
+      }else {
+        return 0;
+      }
+
+
+
+
+  }
+
 
 
 }
