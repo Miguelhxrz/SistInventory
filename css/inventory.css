@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px
+}
 
-*{
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px
+html {
+    font-size: 62.5%
 }
-html{
-  font-size: 62.5%
-}
+
 :root {
-
-  --color: rgb(41, 120, 194);
-  --font: 'Poppins', sans-serif;
-
+    --color: rgb(41, 120, 194);
+    --font: 'Poppins', sans-serif;
 }
-
